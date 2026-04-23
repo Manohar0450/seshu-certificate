@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificate Verification – SkillDzire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f2;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #d94f2b;
+      --valid: #1e8a44;
+      --valid-bg: #eafaf0;
+      --border: #e4e2db;
+      --shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      color: var(--text);
+    }
+
+    /* Top bar */
+    .topbar {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    .logo-text span { color: var(--accent); }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 480px;
+      padding: 48px 44px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 36px;
+      color: var(--text);
+    }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 0 auto 36px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 22px;
+    }
+
+    .field-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .field-value {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .field-sep {
+      height: 1px;
+      background: var(--border);
+      margin: 4px 0 0;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--valid-bg);
+      border: 1.5px solid #a8ddb8;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 30px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(30, 138, 68, 0.15); }
+      50%       { box-shadow: 0 0 0 6px rgba(30, 138, 68, 0); }
+    }
+
+    .badge-icon {
+      font-size: 22px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .badge-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--valid);
+    }
+
+    /* Footer */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 18px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a class="logo" href="#">
+      <div class="logo-icon">S</div>
+      <span class="logo-text"><span>Skill</span>Dzire</span>
+    </a>
+  </nav>
+
+  <main class="main">
+    <div class="card">
+      <h1 class="card-title">Certificate<br>Verification</h1>
+      <div class="divider"></div>
+
+      <div class="field">
+        <span class="field-label">Certificate ID</span>
+        <span class="field-value">94uv9211r5</span>
+        <div class="field-sep"></div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Student Name</span>
+        <span class="field-value">Veera Seshagiri Rao Kanda</span>
+        <div class="field-sep"></div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Course Name</span>
+        <span class="field-value">Data Science</span>
+        <div class="field-sep"></div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Issue Date</span>
+        <span class="field-value">2026-03-31</span>
+        <div class="field-sep"></div>
+      </div>
+
+      <div class="badge">
+        <span class="badge-icon">✅</span>
+        <span class="badge-text">This certificate is valid.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    SkillDzire Technologies Private Limited
+  </footer>
+
+</body>
+</html>
